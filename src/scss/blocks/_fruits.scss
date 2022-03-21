@@ -1,0 +1,97 @@
+.fruit{
+    position: relative;
+    height: 850px;
+    background-color: #F3FBF8;
+    padding-top: 93px;
+    &_bg_milenta{
+        position: absolute;
+        width: 612px;
+        height: 408px;
+        left: 10px;
+        top: -40px;
+        background-image: url(../../img/fresh-melientha.png);
+        background-repeat: no-repeat;
+    }
+    &_bg_fruit{
+        position: absolute;
+        width: 862px;
+        height: 465px;
+        left: 120px;
+        bottom: 37px;
+        background-image: url(../../img/vegetables-fruits_bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &_title{
+        @include title;
+        
+        text-align: center;
+    }
+    &_descr{
+        @include descr;
+        margin: 20px auto 40px auto;
+        width: 637px;
+        text-align: center;
+    }
+    &_order{
+        width:174px;
+        height: 64px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &_info{
+        position: absolute;
+        right: 0px;
+        margin: auto 100px;
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        &_item{
+            margin-top: 30px;
+            width: 250px;
+            height: 116px;
+            background-color: #fff;
+            img{
+                width: 56px;
+                height: 56px;
+                border-radius:50%;
+                background-color: #F3FBF8;
+                align-items:center;
+                margin: 30px 24px 30px 33px;
+
+            }
+            &_text{
+                display: flex;
+                flex-direction: column;
+                align-items:end;
+                justify-content: space-between;
+                font-size: 48px;
+                span{
+                    font-size: 18px;
+                }
+            }
+            // &_big{
+            //     position: absolute;
+            //     top: 0px;
+            //     right: 0px;
+            //     font-size: 48px;
+            //     margin-top: 17px;
+            // }
+            // &_small{
+            //     position: absolute;
+            //     bottom:17px;
+            //     right: 0px;
+            //     font-size: 18px;
+            //     margin-top: 4px;
+            // }
+        }
+    }
+}

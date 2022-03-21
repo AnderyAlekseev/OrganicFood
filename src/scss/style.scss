@@ -1,0 +1,13 @@
+@import "base/mixins.scss";
+@import "base/buttons";
+
+@import "blocks/header";
+@import "blocks/fruits";
+
+* {
+    max-width: 1440px;
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
