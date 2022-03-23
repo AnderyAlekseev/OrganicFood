@@ -10,8 +10,11 @@
     font-size: 18px;
     line-height: 24px;
     color: #222222;
+    nav{
+        margin-left: 0;
+    }
     &__menu {
-        
+        margin-left: 0;
         list-style-type:none;
         display: flex;
         justify-content: space-between;
@@ -30,12 +33,17 @@
         width: 56px;
         height: 56px;
     }
+    &__panel{
+        margin-right: 0px;
+        display: flex;
+        justify-content: end;
+    }
     &__button{
         width: 40px;
         height: 40px;
         border-radius: 50%;
         background-color: #F3FBF8;
-        margin-right: 20px;
+        margin-left: 20px;
         border: none;
         img{
             width: 24px;
@@ -48,9 +56,50 @@
             font-weight: 400;
             font-size: 18px;
             border-radius: 8px;
-            margin-right: 32px;
+            border-style: none;
+            margin-left: 32px;
             color: #fff;
             background: #09A66D;
+            cursor: pointer;
         }
     }
+}
+@media screen and (max-width: 1000px){
+    .header{
+        padding: 0px 50px;
+    }
+}
+@media screen and (max-width: 900px){
+    .header{
+        padding: 0px 25px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .header__menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 427px){
+    .header{
+        &__button{
+            &_register{
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .header{
+        &__logo{
+            display: none;
+            }
+        &__button{
+            margin-left: 15px;
+        }
+        }
+        
 }

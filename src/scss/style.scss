@@ -3,11 +3,9 @@
 
 @import "blocks/header";
 @import "blocks/fruits";
-
+@import "blocks/best";
 * {
-    max-width: 1440px;
-    margin: 0px;
     padding: 0px;
-    
-    
+    max-width: 1440px;
+    margin: 0 auto;
 }

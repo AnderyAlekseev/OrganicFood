@@ -4,6 +4,7 @@
     font-size: 70px;
     line-height: 90px;
     color: #222222;
+    text-align: center;
 }
 
 @mixin descr{
@@ -14,10 +15,9 @@
     text-align: center;
     color: #555555;
 }
-
-// @mixin round_button{
-//     width: 64px;
-//     height: 64px;
-//     border-radius: 50%;
-//     background: #09A66D;
+// @media screen and (max-width: 1000px){
+//     @include title{
+//         font-size: 50px;
+//     }
+    
 // }
