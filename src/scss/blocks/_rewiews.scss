@@ -1,0 +1,98 @@
+.rewiews{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 96px;
+    &_block{
+        @include left_col ;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        &_title{
+            @include title;
+        }
+        &_descr{
+            @include descr
+        }
+    }
+    &_footer{
+        display: flex;
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+        max-width: 478px;
+        &_buttons{
+            margin-top: 40px;
+            display: flex;
+        }
+        &_raiting{
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+            
+            &_name{
+                font-size: 2.14rem;
+                font-weight: 500;
+                line-height: 2.56rem;
+            }
+            &_stars{
+                max-width: 151px;
+                margin-top: 20px;
+                margin-left: 0;
+                display: flex;
+                align-items:center;
+                justify-content: space-between;
+                &_item{
+                    width: 23h;
+                    height: 23px;
+                    font-size: 32px;
+                    &:before {
+                        content: '★';
+                        color: gold;
+	                    text-shadow: 1px 1px #c60;
+                        margin: 4px;
+                    }
+                }
+
+            }
+        }
+    }
+    
+
+    &_img{
+        @include right_col;
+        margin-top: 41px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+    .rewiews{
+        flex-direction: column;
+        &_img{
+            margin: auto;
+            order: 2;
+            width: calc(100% - 50px);
+        }
+        &_block{
+            width: calc(100% - 50px);
+            order: 1;
+            margin: auto;
+            &_title{
+                text-align: center;
+            }
+            &_descr{
+                text-align: center;
+            }
+             
+        }
+    }
+}
