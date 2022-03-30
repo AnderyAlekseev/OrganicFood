@@ -1,17 +1,22 @@
 .header{
-    height: 150px;
-    padding: 0px 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-family: 'DM Sans',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    height: 150px;
+    padding: 0px 100px;
+    // font-family: 'Raleway', sans-serif;
     color: #222222;
     nav{
         margin-left: 0;
+    }
+    &_hamburger{
+        display: none;
+        width: 32px;
+        span{
+            display: block;
+            border: 2px solid #09A66D;
+            width: 100%;
+            margin-top: 5px;
+        }
     }
     &__menu {
         margin-left: 0;
@@ -20,6 +25,8 @@
         justify-content: space-between;
         &_link{
             text-decoration:none;
+            font-weight: 400;
+            font-size: 1.3rem;
             margin-right: 40px;
             &:active{
                 color: #222222;
@@ -36,7 +43,7 @@
     &__panel{
         margin-right: 0px;
         display: flex;
-        justify-content: end;
+        
     }
     &__button{
         width: 40px;
@@ -54,7 +61,7 @@
             height: 40px;
             font-style: normal;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 1.3rem;
             border-radius: 8px;
             border-style: none;
             margin-left: 32px;
@@ -64,42 +71,61 @@
         }
     }
 }
-@media screen and (max-width: 1000px){
-    .header{
-        padding: 0px 50px;
-    }
-}
-@media screen and (max-width: 900px){
-    .header{
-        padding: 0px 25px;
-        font-size: 17px;
-    }
-}
 
-@media screen and (max-width: 800px){
-    .header__menu{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 427px){
+@media screen and (max-width:800px) /*and (min-width:399px)*/{
     .header{
-        &__button{
-            &_register{
-                margin-left: 15px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 375px){
-    .header{
-        &__logo{
+        padding: 0px 70px;
+        &__menu{
             display: none;
-            }
-        &__button{
-            margin-left: 15px;
         }
+        &_hamburger{
+            display: block;
+        }
+        &__button{
+            margin-left: 30px;
+            &_register{
+                width: 110px;
+            }
         }
         
+    }
+}
+
+@media screen and (max-width:600px) /*and (min-width:319px)*/{
+    .header{
+        padding: 0px 40px;
+        &__menu{
+            display: none;
+        }
+        &_hamburger{
+            display: block;
+        }
+        &__button{
+            margin-left: 20px;
+            &_register{
+                width: 100px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width:450px) {
+    .header{
+        padding: 0px 30px;
+        &__logo{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .header{
+        padding: 0 15px;
+        &__button{
+            &_register{
+                margin-left: 20px;
+            }
+        }
+    }
 }

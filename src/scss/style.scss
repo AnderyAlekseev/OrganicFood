@@ -4,8 +4,49 @@
 @import "blocks/header";
 @import "blocks/fruits";
 @import "blocks/best";
+@import "blocks/special";
+@import "blocks/rewiews";
+
+.wrapper{
+    width: 100%;
+    margin: 0px 100px;
+}
+
 * {
     padding: 0px;
     max-width: 1440px;
     margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
 }
+/*
+font-family: 'Philosopher', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+// @media screen and (max-width:1200px) and (min-width:799px){
+//     *{
+//         // font-size: 11px;
+//     }
+// }
+@media screen and (max-width:800px) and (min-width:399px){
+    *{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:400px) and (min-width:339px){
+    *{
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-width:340px){
+    *{
+        font-size: 9px;
+    }
+}
+
+
+
+
+
+

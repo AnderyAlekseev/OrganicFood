@@ -1,19 +1,30 @@
 @mixin title{
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-weight: 700;
-    font-size: 70px;
-    line-height: 90px;
+    font-size: 5rem;
+    line-height: 6.5rem;
     color: #222222;
-    text-align: center;
+    // padding: 0px 20px;
+    // text-align: center;
 }
 
 @mixin descr{
-    font-family: 'DM Sans', sans-serif;
+    // font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
     color: #555555;
+    margin-top: 20px;
+    // padding: 0px 20px;
+    // text-align: center;
+}
+@mixin right_col{
+    width: calc(50% - 100px);
+    margin-left: 25px;       
+}
+@mixin left_col{
+    width: calc(50% - 100px);
+    margin-right: 25px;       
 }
 // @media screen and (max-width: 1000px){
 //     @include title{

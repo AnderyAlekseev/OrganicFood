@@ -1,10 +1,81 @@
 .round_button{
-    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     width: 64px;
     height: 64px;
+    font-size: 32px;
     border-radius: 50%;
     border:none;
-    background: #09A66D;
-    margin-left: 20px;
+    margin: 13px;
+    text-align: center;
     cursor: pointer;
+    background: white;
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    span{
+        border: 1px solid #CCCCCC;
+    }
+    &_active{
+        background: #09A66D;
+        span{
+            border: 1px solid white;
+        }
+    }
+    &_small{
+        width: 56px;
+        height: 56px;
+    }
+    &_arrow{
+        span{
+            &:nth-child(1){
+                width: 33px;
+                transform: translateX(12px);
+            }
+            &:nth-child(2){
+                width: 9px;
+                transform: rotate(45deg) translate(-2px, -3px);
+            }
+            &:nth-child(3){
+                width: 9px;
+                transform: rotate(-45deg) translate(-11px, -6px);
+            }
+        }
+        
+    }
+    &_brecket_left
+    {
+        span{
+            width: 9px;
+            
+            &:nth-child(1){
+                transform: rotate(-45deg)  translate(12px, 7px);
+            }
+            &:nth-child(2){
+                transform: rotate(45deg)  translate(-7px, 12px);
+            }
+        }
+    }
+    &_brecket_right
+    {
+        span{
+            width: 9px;
+            
+            &:nth-child(1){
+                
+                transform: rotate(45deg)  translate(7px, -12px);
+                
+            }
+            &:nth-child(2){
+                width: 9px;
+                transform: rotate(-45deg)  translate(-12px, -7px);
+                
+            }
+        }
+    }
+   
+    
+
+    //     &lt; - <    &gt; - > 
+
 }
