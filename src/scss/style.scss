@@ -1,12 +1,15 @@
+@import "base/variables";
 @import "base/mixins.scss";
 @import "base/buttons";
+// @import "../css/font.css";
 
 @import "blocks/header";
 @import "blocks/fruits";
 @import "blocks/best";
 @import "blocks/special";
 @import "blocks/rewiews";
-
+@import "blocks/app";
+@import "blocks/footer";
 .wrapper{
     width: 100%;
     margin: 0px 100px;
@@ -18,6 +21,7 @@
     margin: 0 auto;
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
 }
 /*
 font-family: 'Philosopher', sans-serif;

@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 96px;
+    transition: 0.5s;
     &_block{
         @include left_col ;
         display: flex;
@@ -23,6 +24,7 @@
         max-width: 478px;
         &_buttons{
             margin-top: 40px;
+            margin-left: 124px;
             display: flex;
         }
         &_raiting{
@@ -93,6 +95,13 @@
                 text-align: center;
             }
              
+        }
+        &_footer{
+            flex-direction: column;
+            margin-left: auto;
+            &_buttons{
+                margin-left: auto;
+            } 
         }
     }
 }

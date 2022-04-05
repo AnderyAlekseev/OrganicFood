@@ -3,9 +3,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 850px;
+    max-height: 850px;
+    // padding-top: $headerHeight;
     background-color: #F3FBF8;
-    background-image: url(../../img/fresh-melientha.png);
+    background-image: url(../img/fresh-melientha.png);
     background-repeat: no-repeat;     
     background-position: left 10px top -40px;
     background-size: 612px 408px;
@@ -27,13 +28,13 @@
         font-size: 1.3rem;
     }
     &_block{
-        background-image: url(../../img/vegetables-fruits-bg.png);
+        background-image: url(../img/vegetables-fruits-bg.png);
         background-repeat: no-repeat;     
         background-position: left 120px bottom 37px;  
         width: 100%;
         display: flex;
-        align-items:center;
-        align-self: flex-end;
+        // align-items:center;
+        // align-self: flex-end;
         &_info{
             margin-right: 100px;
             margin-bottom: 50px;
@@ -108,6 +109,9 @@
                     
                 }
             }
+        }
+        &_order{
+            margin-bottom: 30px;
         }
        
     }

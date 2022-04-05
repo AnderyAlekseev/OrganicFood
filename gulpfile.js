@@ -1,3 +1,5 @@
+"use strict";
+
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
 const sass        = require('gulp-sass')(require('sass'));
@@ -81,4 +83,4 @@ gulp.task('php', function () {
 
 
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html','image'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html','image','php'));

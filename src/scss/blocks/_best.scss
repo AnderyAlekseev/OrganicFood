@@ -13,9 +13,9 @@
         flex-direction: column;
         &_title{
             @include title;
-            width: calc(110%);
             margin-left: 0;
             text-align: center;
+            width: 120%;
         }
         &_sub{
             @include descr;
@@ -32,7 +32,7 @@
                 display: flex;
                 align-items: center;
                 max-width: 500px;
-                height: 160px;
+                min-height: 160px;
                 padding: 0px 60px;
                 // margin-left: 0px;
                 &:hover{
@@ -108,6 +108,9 @@
             margin: auto;
             order: 1;
             width: calc(100% - 50px);
+            &_title{
+                width: 100%;
+            }
         }
         &_img{
             margin: auto;
@@ -119,22 +122,18 @@
     }
 }
 
-// @media screen and (max-width: 700px){
-//     .best{
-//         // &_details{
-//         //     &_item{
-//         //         width: unset;
-//         //     }
-//         // }
-//         // &_title{
-//         //     text-align: center;
-//         // }
-//         // &_descr{
-//         //     text-align: center;
-//         // }
+@media screen and (max-width: 700px){
+    .best{
+        &_block{
+            &_details{
+                &_item{
+                    padding: 10px 20px;
+                }
+            }
+        }
         
-//     }
-// }
+    }
+}
 
 // @media screen and (max-width: 375px){
 //     .best{

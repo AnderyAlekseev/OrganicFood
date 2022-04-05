@@ -4,19 +4,17 @@
     font-size: 5rem;
     line-height: 6.5rem;
     color: #222222;
-    // padding: 0px 20px;
-    // text-align: center;
+    
 }
 
 @mixin descr{
-    // font-family: 'Raleway', sans-serif;
+    
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 2.5rem;
     color: #555555;
     margin-top: 20px;
-    // padding: 0px 20px;
-    // text-align: center;
+    
 }
 @mixin right_col{
     width: calc(50% - 100px);
@@ -26,9 +24,3 @@
     width: calc(50% - 100px);
     margin-right: 25px;       
 }
-// @media screen and (max-width: 1000px){
-//     @include title{
-//         font-size: 50px;
-//     }
-    
-// }
