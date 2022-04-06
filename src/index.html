@@ -45,7 +45,7 @@
             <button class="header__button">
                 <img src="img/Buy.png" alt="buy">
             </button>
-            <button class="header__button_register">
+            <button class="header__button_register" id="register">
                 Регистрация
             </button>
         </div>
@@ -266,29 +266,33 @@
         <!-- --------------------------Modal windows    -------------------------->
         <!-- Регистрация -->
         <section class="overlay">
-            <div class="modal reg">
-                <div class="modal__close">&times;</div>
-                <div class="modal__title">Просто заполните форму регистрации</div>
-                
-                <form action="#" class="reg_form ">
-                    <input name="name" type="text"placeholder="Ваше имя" >
-                    <input name="phone"  type="tel" placeholder="Ваш телефон">
-                    <input name="email"  type="email" placeholder="Ваш E-mail">
+            <div class="modal">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">Заполните форму регистрации</div>
+        
+                <form action="#" class="modal_form ">
+                    <input name="name" type="text" placeholder="Ваше имя">
+                    <input name="phone" type="tel" placeholder="Ваш телефон">
+                    <input name="email" type="email" placeholder="Ваш E-mail">
                     <button class="button button__submit">Зарегистрироваться </button>
                 </form>
-    
+        
             </div>
             <!-- Спасибо за регистрацию -->
-           <div class="reg_thanks">
-            <div class="modal__close">&times;</div>
-            <div class="modal__title">Спасибо за регистрацию!</div>
-            <div class="modal__descr">На ваш email отправлены логин и пароль для входа</div>
-
-           </div>
+            <div class="modal_thanks">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">Спасибо за регистрацию!</div>
+                <div class="modal_descr">На ваш email отправлены логин и пароль для входа</div>
+            </div>
             <!-- Закаrзать -->
-
+        
         </section>
-    </div>
-    <script src="js/script.js"> </script>
-</body>
-</html>
+        </div>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <!-- <script src="../node_modules/jquery/dist/jquery.min.js"> </script> -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/script_JQ.js"> </script>
+        
+        </body>
+        
+        </html>

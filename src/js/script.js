@@ -2,22 +2,24 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     // находим все кнопки
-    let hamburger = document.getElementById('header_hamburger');
-    let but_aboutUs = document.getElementById('but_aboutUs');
-    let but_services = document.getElementById('but_services');
-    let but_catalog = document.getElementById('but_catalog');
-    let but_contacts = document.getElementById('but_contacts');
+    
+    // let hamburger     = document.getElementById('header_hamburger');
+    let b_aboutUs     = document.getElementById('but_aboutUs');
+    let b_services    = document.getElementById('but_services');
+    let b_catalog     = document.getElementById('but_catalog');
+    let b_contacts    = document.getElementById('but_contacts');
+    let b_modal_close = document.getElementsByClassName('modal_close');
 //  назначаем им слушателей
-    hamburger.addEventListener('click', () => {
-        let header__menu = document.getElementById('header__menu');
-        header__menu.classList.toggle('header__menu_active');
-    });
+    // hamburger.addEventListener('click', () => {
+    //     let header__menu = document.getElementById('header__menu');
+    //     header__menu.classList.toggle('header__menu_active');
+    // });
 
-    but_aboutUs.addEventListener('click', getAboutUs);
+    // b_aboutUs.addEventListener('click', getAboutUs);
     // but_services.addEventListener('click', getServices);
     // but_catalog.addEventListener('click', getCatalog);
     // but_contacts.addEventListener('click', getContact);
-    
+    // b_modal_close.addEventListener('click', f_Modal_Close);
 
 });
 
@@ -38,4 +40,8 @@ function getAboutUs(){
 
     };
     xhr.send();  // Инициирует запрос. Посылаем запрос на сервер.
+}
+
+function f_ModalClose(){
+
 }

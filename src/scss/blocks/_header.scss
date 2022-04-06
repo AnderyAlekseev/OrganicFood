@@ -16,9 +16,19 @@
         width: 32px;
         span{
             display: block;
-            border: 2px solid #09A66D;
+            border: 2px solid $mainColor;
             width: 100%;
             margin-top: 5px;
+        }
+        &_active{
+            span{
+                &:nth-child(2){
+                    transform: rotateY(45deg);
+                }
+                &:nth-child(3){
+                    transform: rotateY(90deg);
+                }
+            }
         }
     }
     &__menu {
@@ -73,8 +83,11 @@
             border-style: none;
             margin-left: 32px;
             color: #fff;
-            background: #09A66D;
+            background: $mainColor;
             cursor: pointer;
+            &:hover{
+                background: $hoverColor;
+            }
         }
     }
 }
@@ -89,7 +102,7 @@
             max-height: 400px;
             min-width: 300px;
             padding: 50px 0;
-            background-color: rgba(9, 166, 109, 0.95);
+            background-color: $bgColor;
             align-items:center;
             justify-content: flex-start;
             position: fixed;
