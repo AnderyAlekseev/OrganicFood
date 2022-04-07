@@ -25,16 +25,14 @@
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
 }
-/*
-font-family: 'Philosopher', sans-serif;
-font-family: 'Raleway', sans-serif;
-*/
+.page_up{
+    display: none;
+    position: fixed ;
+    bottom: 50px;
+    right: 50px;
+    transform: rotate(-90deg);
 
-// @media screen and (max-width:1200px) and (min-width:799px){
-//     *{
-//         // font-size: 11px;
-//     }
-// }
+}
 @media screen and (max-width:800px) and (min-width:399px){
     *{
         font-size: 10px;
