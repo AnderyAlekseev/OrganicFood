@@ -27,7 +27,7 @@ gulp.task('styles', function() {
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css"))
-        //.pipe(gulp.dest("C://OpenServer/domains/localhost/css"))
+        .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/css"))
         .pipe(browserSync.stream());
 });
 
@@ -45,42 +45,42 @@ gulp.task('html', function () {
     return gulp.src("src/*.+(php|html)")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"))
-       //.pipe(gulp.dest("C://OpenServer/domains/localhost"));
+        .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru"));
 });
 
 gulp.task('scripts', function () {
     return gulp.src("src/js/**/*.js")
         .pipe(gulp.dest("dist/js"))
-       //.pipe(gulp.dest("C://OpenServer/domains/localhost/js"))
+        .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/js"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('fonts', function () {
     return gulp.src("src/fonts/**/*")
         .pipe(gulp.dest("dist/fonts"))
-        //.pipe(gulp.dest("C://OpenServer/domains/localhost/fonts"))
+        .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/fonts"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('icons', function () {
     return gulp.src("src/icons/**/*")
         .pipe(gulp.dest("dist/icons"))
-       //.pipe(gulp.dest("C://OpenServer/domains/localhost/icons"))
+       .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/icons"))
         .pipe(browserSync.stream());
 });
 gulp.task('image', function () {
     return gulp.src("src/img/**/*")
         .pipe(gulp.dest("dist/img"))
-       //.pipe(gulp.dest("C://OpenServer/domains/localhost/img"))
+       .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/img"))
         .pipe(browserSync.stream());
 });
 gulp.task('php', function () {
-    return gulp.src("src/php/**/*")
+    return gulp.src("src/php/**/*.php")
         .pipe(gulp.dest("dist/php"))
-       //.pipe(gulp.dest("C://OpenServer/domains/localhost/php"))
+       .pipe(gulp.dest("C://OpenServer/domains/OrganicFood.ru/php"))
         .pipe(browserSync.stream());
 });
 
 
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html','image','php'));
+gulp.task('default', gulp.parallel('watch', /*'server', */'styles', 'scripts', 'fonts', 'icons', 'html','image','php'));
