@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     padding-top: 96px;
     transition: 0.5s;
+    min-height: 760px;
     &_block{
         @include left_col ;
         display: flex;
