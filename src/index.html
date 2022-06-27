@@ -62,7 +62,7 @@
             <button class="header__button">
                 <img src="img/Buy.png" alt="buy">
             </button>
-            <button class="header__button_register" id="register">
+            <button class="header__button_register" id="but_register">
                 Регистрация
             </button>
         </div>
@@ -279,7 +279,7 @@
         <!-- --------------------------Modal windows    -------------------------->
         <!-- Регистрация -->
         <section class="overlay">
-            <div class="modal">
+            <div class="modal" id="modal_register">
                 <div class="modal_close">&times;</div>
                 <div class="modal_title">Заполните форму регистрации</div>
 
@@ -292,11 +292,14 @@
 
             </div>
             <!-- Спасибо за регистрацию -->
-            <div class="modal_thanks">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Спасибо за регистрацию!</div>
-                <div class="modal_descr">На ваш email отправлены логин и пароль для входа</div>
+            <div class="modal" id="thanks">
+                <div class="modal_thanks" >
+                    <div class="modal_close">&times;</div>
+                    <div class="modal_title">Спасибо за регистрацию!</div>
+                    <div class="modal_descr">На ваш email отправлены логин и пароль для входа</div>
+                </div>
             </div>
+           
             <!-- Заказать -->
         </section>
     </div>
@@ -309,6 +312,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script_JQ.js"> </script>
+    <script src="js/jquery.maskedinput.min.js"> </script>
+    <script src="js/jquery.validate.min.js"> </script>
+
+
 
 </body>
 
