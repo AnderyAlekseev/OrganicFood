@@ -1,11 +1,9 @@
 .header{
-    // position: fixed;
     width: calc(100% - 200px);
-    // width: 100%;
     display: flex;
     align-items: center;
     height: $headerHeight;
-    padding: 0px 100px;
+    // padding: 0px 100px;
     color: #222222;
     background-color: #fff;
     nav{
@@ -32,7 +30,6 @@
         }
     }
     &__menu {
-        // flex-basis:45%;
         margin-left: 0;
         list-style-type:none;
         display: flex;
@@ -55,7 +52,6 @@
         height: 56px;
     }
     &__panel{
-        // flex-basis:45%;
         margin-right: 0px;
         display: flex;
         justify-content: flex-end;
@@ -92,6 +88,17 @@
     }
 }
 
+// @media screen and (max-width:1100px) {
+//     .header{
+//         &__button{
+//             margin-left: 30px;
+//             &_register{
+//                 width: 110px;
+//             }
+//         }
+
+//     }
+// }
 @media screen and (max-width:800px) {
     .header{
         width: calc(100% - 100px);
@@ -157,12 +164,6 @@
 @media screen and (max-width:600px) /*and (min-width:319px)*/{
     .header{
         padding: 0px 40px;
-        &__menu{
-            // display: none;
-        }
-        &_hamburger{
-            // display: block;
-        }
         &__button{
             margin-left: 20px;
             &_register{

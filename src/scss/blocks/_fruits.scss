@@ -86,7 +86,7 @@
 @media screen and (max-width: 800px) {
     .fruit {
         &_descr {
-            width: unset;
+            width: calc(100% - 50px);
         }
     }
 }
