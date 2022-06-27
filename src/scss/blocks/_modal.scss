@@ -60,7 +60,7 @@
              min-height: 140px;
         }
         &_thanks{
-            display: none;
+            height: 200px;
         }
         .error{
             border: 1px solid red;
@@ -72,6 +72,11 @@
         }
     }
 }
+
+#modal_register, #thanks{
+    display: none;
+}
+
 
 @media screen and (max-width:500px) {
     .overlay{

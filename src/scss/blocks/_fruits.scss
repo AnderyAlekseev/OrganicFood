@@ -1,150 +1,151 @@
-.fruit{
+.fruit {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: 850px;
-    // padding-top: $headerHeight;
     background-color: #F3FBF8;
     background-image: url(../img/fresh-melientha.png);
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat;
     background-position: left 10px top -40px;
     background-size: 612px 408px;
-    &_title{
+
+    &_title {
         margin-top: 93px;
         @include title;
         text-align: center;
     }
-    &_descr{
+
+    &_descr {
         @include descr;
         text-align: center;
         width: 637px;
     }
-    &_order{
+
+    &_order {
         height: 64px;
         margin-top: 40px;
-        // font-family: 'Raleway', sans-serif;
         font-weight: 500;
         font-size: 1.3rem;
     }
-    &_block{
+
+    &_block {
         background-image: url(../img/vegetables-fruits-bg.png);
-        background-repeat: no-repeat;     
-        background-position: left 120px bottom 37px;  
+        background-repeat: no-repeat;
+        background-position: left 120px bottom 37px;
         width: 100%;
         display: flex;
-        // align-items:center;
-        // align-self: flex-end;
-        &_info{
+
+        &_info {
             margin-right: 100px;
             margin-bottom: 50px;
-
-            // font-family: 'Raleway', sans-serif;
             font-weight: 400;
-            &_item{
+
+            &_item {
                 display: flex;
-                align-items:center;
+                align-items: center;
                 justify-content: space-between;
                 margin-top: 30px;
                 width: 250px;
                 height: 116px;
                 background-color: #fff;
-                &_img{
+
+                &_img {
                     max-width: 56px;
                     max-height: 56px;
                     padding: 12px;
-                    border-radius:50%;
+                    border-radius: 50%;
                     background-color: #F3FBF8;
                     margin-left: 33px;
-                    img{
+
+                    img {
                         max-width: 32px;
                         max-height: 32px;
                     }
-                    
                 }
-                &_text{
+
+                &_text {
                     display: flex;
                     flex-direction: column;
-                    align-items:end;
+                    align-items: end;
                     justify-content: space-between;
                     font-size: 3.4rem;
                     margin-right: 33px;
-                    span{
+
+                    span {
                         font-size: 1.3rem;
                     }
                 }
-                
+
             }
         }
     }
-    
-    
 }
 
 
 
-@media screen and (max-width: 800px){
-    .fruit{
-        &_descr{
+@media screen and (max-width: 800px) {
+    .fruit {
+        &_descr {
             width: unset;
         }
     }
 }
 
-@media screen and (max-width: 700px){
-   
-}
+@media screen and (max-width: 700px) {}
 
-@media screen and (max-width: 700px){
-    .fruit{
+@media screen and (max-width: 700px) {
+    .fruit {
         background-image: url(../../img/fresh-melientha.png);
-        background-position: left 0px top 0px;  
-        &_block{
-            &_info{
+        background-position: left 0px top 0px;
+
+        &_block {
+            &_info {
                 margin-right: auto;
                 position: unset;
-                &_item{
+
+                &_item {
                     height: 100px;
                     margin-top: 15px;
-                    
+
                 }
             }
         }
-        &_order{
+
+        &_order {
             margin-bottom: 30px;
         }
-       
+
     }
 }
 
-@media screen and (max-width: 500px){
-    .fruit{
-        &_info{
+@media screen and (max-width: 500px) {
+    .fruit {
+        &_info {
             position: unset;
-            &block{
-                &_item{
+
+            &block {
+                &_item {
                     height: unset;
                     margin-top: 15px;
-                    &_text{
+
+                    &_text {
                         font-size: 38px;
                     }
                 }
             }
         }
-       
+
     }
 }
 
-@media screen and (max-width: 427px){
-    .fruit{
-        &block{
-            &_info{
-                margin: 0px 0px ;
-                &_item{
-                    // &_text{
-                    //     // font-size: 24px;
-                    // }
-                    &_img{
+@media screen and (max-width: 427px) {
+    .fruit {
+        &block {
+            &_info {
+                margin: 0px 0px;
+
+                &_item {
+                    &_img {
                         margin: 5px 5px;
                     }
                 }
@@ -154,14 +155,16 @@
 
 }
 
-@media screen and (max-width: 375px){
-    .fruit{
+@media screen and (max-width: 375px) {
+    .fruit {
         padding-top: 50px;
-        &block{
-            &_info{
-                &_item{
+
+        &block {
+            &_info {
+                &_item {
                     margin-left: 5px;
-                    &_img{
+
+                    &_img {
                         margin: 2px 5px;
                     }
                 }

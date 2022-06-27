@@ -17,12 +17,12 @@ $(document).ready(function () {
 
     //   закрыть все модальные окна
     $('.modal_close').click(function () {
-        $('.overlay, .modal, .modal_thanks').fadeOut(500);
+        $('.overlay, .modal').fadeOut(500); //, .modal_thanks
     });
 
     //   открыть модальное окно регистрации
     $('#but_register').click(function () {
-        $('.overlay, .modal').fadeIn(500);
+        $('.overlay, #modal_register').fadeIn(500);
     });
 
     // показать - скрыть кнопку "Вверх" при прокручивании экрана
@@ -34,37 +34,9 @@ $(document).ready(function () {
         }
     });
 
-        /*
-        {
-                        rules: {
-                            name: {
-                                required: true,
-                                minlength: 2
-                            },
-                            phone: "required",
-                            email: {
-                                required: true,
-                                email: true
-                            }
-                        },
-                        messages: {
-                            name: {
-                                required: " Нам нужно Ваше имя!  ",
-                                minlength: jQuery.validator.format("В имени должно быть не менее {0} символов!")
-                            },
-                            email: {
-                                required: "Обязательно адрес электронной почты",
-                                email: "Адрес электронной почты в формате name@domain.com"
-                            },
-                            phone: {
-                                required: "Телефон в международном формате"
-                            }
-                        }
-                    }
-                    */
-
     // отравка форм
-    // PropsValidateForm('#modal_register form');
+    PropsValidateForm('#modal_register form');
+    $('input[name=phone]').mask("+7(999) 999-9999");
 
     $('#modal_register form').submit(function (e) {
         e.preventDefault();
@@ -78,7 +50,7 @@ $(document).ready(function () {
                 // success: 
             }).done(function () {
                 $(this).find('input').val('');
-                $(this).fadeOut();
+                $('#modal_register').fadeOut();
                 $('#thanks').fadeIn();
                 $('form').trigger('reset');
             })
@@ -141,11 +113,6 @@ $(document).ready(function () {
       }  
     });
   }
-
-//   myValidateForm('#ConsultationForm');
-
-
-
 
 
 function getRewiew(dir) {
