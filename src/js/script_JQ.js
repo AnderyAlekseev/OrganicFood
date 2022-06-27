@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     //   открыть модальное окно регистрации
-    $('#register').click(function () {
+    $('#but_register').click(function () {
         $('.overlay, .modal').fadeIn(500);
     });
 
@@ -34,38 +34,42 @@ $(document).ready(function () {
         }
     });
 
-
+        /*
+        {
+                        rules: {
+                            name: {
+                                required: true,
+                                minlength: 2
+                            },
+                            phone: "required",
+                            email: {
+                                required: true,
+                                email: true
+                            }
+                        },
+                        messages: {
+                            name: {
+                                required: " Нам нужно Ваше имя!  ",
+                                minlength: jQuery.validator.format("В имени должно быть не менее {0} символов!")
+                            },
+                            email: {
+                                required: "Обязательно адрес электронной почты",
+                                email: "Адрес электронной почты в формате name@domain.com"
+                            },
+                            phone: {
+                                required: "Телефон в международном формате"
+                            }
+                        }
+                    }
+                    */
 
     // отравка форм
-    $('form').submit(function (e) {
+    // PropsValidateForm('#modal_register form');
+
+    $('#modal_register form').submit(function (e) {
         e.preventDefault();
-        let validForm = $(this).validate(
-            {
-                rules: {
-                    name: {
-                        required: true,
-                        minlength: 2
-                    },
-                    phone: "required",
-                    email: {
-                        required: true,
-                        email: true
-                    }
-                },
-                messages: {
-                    name: {
-                        required: " Нам нужно Ваше имя!  ",
-                        minlength: jQuery.validator.format("В имени должно быть не менее {0} символов!")
-                    },
-                    email: {
-                        required: "Обязательно адрес электронной почты",
-                        email: "Адрес электронной почты в формате name@domain.com"
-                    },
-                    phone: {
-                        required: "Телефон в международном формате"
-                    }
-                }
-            });
+        console.log(e);
+        let validForm = $(this).valid();
         if (validForm) {
             $.ajax({
                 type: "POST",
@@ -107,6 +111,40 @@ $(document).ready(function () {
     });
 });
 
+/*Эта функция присваивает кастомные свойства
+  к форме при валидации*/ 
+  function PropsValidateForm(any_form){
+    $(any_form).validate({
+      rules:{
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone:"required",
+        email:{
+          required: true,
+          email: true
+        }
+      },
+      messages:{
+        name:{
+          required: " Нам нужно Ваше имя!  ",
+          minlength: jQuery.validator.format("В имени должно быть не менее {0} символов!")
+        } ,
+        email:{
+          required: "Обязательно адрес электронной почты",
+          email: "Адрес электронной почты в формате name@domain.com"
+        },
+        phone:{
+          required: "Телефон в международном формате"
+        }
+      }  
+    });
+  }
+
+//   myValidateForm('#ConsultationForm');
+
+
 
 
 
@@ -118,7 +156,7 @@ function getRewiew(dir) {
         data: Data,
         async: true,
         success: function (data) {
-            console.log('data',data);
+            // console.log('data',data);
             let responce = JSON.parse(data);
             $('#customer_text').text(responce.text);
             $('#cutomer_name').text(responce.name + ' ' + responce.surname);
